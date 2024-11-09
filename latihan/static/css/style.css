@@ -1,0 +1,20 @@
+h1 {
+    color:blue
+}
+
+table, tr, td {
+    border: 2px black solid
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;  /* Atur tinggi sesuai kebutuhan */
+    margin-top: 20px;  /* Menambahkan sedikit jarak di atas */
+}
+
+img {
+    max-width: 100%;  /* Agar gambar responsif */
+    height: auto;
+}

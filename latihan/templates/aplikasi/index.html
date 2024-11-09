@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Latihan Django Rifdah</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <h1>Halaman index.html</h1>
+        {{ insert_me }}
+
+        <p>Ini adalah gambar dari logo Universitas Lampung, tempat saya menempuh pendidikan saat ini.</p>
+        <div class="logo-container">
+            <img src="{% static 'images/Logo-2016-Unila.png' %}" alt="Logo Universitas Lampung" width="100">
+        </div>
+
+        <h2>Daftar access record:</h2>
+        <div class="djangtwo">
+            {% if access_record %}
+                <table>
+                    <thead>
+                        <th>Site Name</th>
+                        <th>Date Accessed</th>
+                    </thead>
+                    {% for acc in access_record %}
+                        <tr>
+                            <td>{{ acc.name }}</td>
+                            <td>{{ acc.date }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>Tidak ada access record</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
