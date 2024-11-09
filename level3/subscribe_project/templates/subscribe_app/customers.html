@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>CUSTOMERS</title>
+</head>
+<body>
+    <h1>Ini adalah daftar dari pelanggan kami</h1>
+    {% if customers %}
+        <ol>
+            {%for person in customers %}
+            <li>
+                Info pelanggan
+                <ul>
+                    <li>Nama depan: {{person.first_name}}</li>
+                    <li>Nama belakang: {{person.last_name}}</li>
+                    <li>Email: {{person.email}}</li>
+                </ul>
+            </li>
+            {%endfor%}
+        </ol>
+    {%endif%}
+</body>
